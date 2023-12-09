@@ -143,7 +143,6 @@ class TestFileStorage_methods(unittest.TestCase):
         self.assertIn("Place." + Place1.id, objs)
         self.assertIn("City." + City1.id, objs)
         self.assertIn("Amenity." + Amenity1.id, objs)
-        
 
     def test_reload_Raises(self):
         with self.assertRaises(TypeError):
