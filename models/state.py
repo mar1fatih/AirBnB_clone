@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""class state"""
+"""class state check the code"""
 from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """class State"""
+    """class State check the code"""
+
     name = ""

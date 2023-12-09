@@ -21,11 +21,11 @@ def parse(args):
 
 class HBNBCommand(cmd.Cmd):
     """class cmd attributes : prompt"""
+
     __classes = {
             "BaseModel", "User", "State", "City",
             "Amenity", "Place", "Review"}
-
-    prompt = "(hbnb)"
+    prompt = "(hbnb) "
 
     def emptyline(self):
         """dont do anything"""

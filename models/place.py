@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-"""class place"""
+"""class place check the code"""
 from models.base_model import BaseModel
 
 
 class Place(BaseModel):
-    """class Place"""
+    """class Place check the code"""
+
     city_id = ""
     user_id = ""
     name = ""

@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""class FileStorage"""
+"""class FileStorage check the code"""
 import json
 from models.base_model import BaseModel
 from models.user import User
@@ -11,7 +11,7 @@ from models.review import Review
 
 
 class FileStorage:
-    """class FileStorage"""
+    """class FileStorage check the code"""
     __file_path = "file.json"
     __objects = dict()
 
@@ -28,13 +28,13 @@ class FileStorage:
         """serializes __objects to the JSON file"""
         all_obj = FileStorage.__objects
         objec = {obj: all_obj[obj].to_dict() for obj in all_obj.keys()}
-        with open(FileStorage.__file_path, "w", encoding="utf-8") as f:
+        with open(FileStorage.__file_path, "w") as f:
             json.dump(objec, f)
 
     def reload(self):
         """ deserializes the JSON file to __objects"""
         try:
-            with open(FileStorage.__file_path, "r", encoding="utf-8") as f:
+            with open(FileStorage.__file_path) as f:
                 objec = json.load(f)
                 for obj in objec.values():
                     cls_name = obj["__class__"]
