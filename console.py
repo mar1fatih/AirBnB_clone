@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""class cmd"""
+"""class cmd console.py"""
 import cmd
 from models.base_model import BaseModel
 import shlex
