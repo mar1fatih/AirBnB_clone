@@ -41,7 +41,9 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def do_create(self, classname):
-        """create a new instance"""
+        """Usage: create <class>
+        create a new instance
+        """
         if not classname:
             print("** class name missing **")
             return
@@ -54,7 +56,9 @@ class HBNBCommand(cmd.Cmd):
         print("{}.{}".format(args[0], new_inctence.id))
 
     def do_show(self, classname):
-        """Prints the string representation of an instance"""
+        """Usage: show <class> <id>
+        Prints the string representation of an instance
+        """
         if not classname:
             print("** class name missing **")
             return
@@ -72,7 +76,9 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def do_destroy(self, classname):
-        """Deletes an instance based on the class name and id """
+        """Usage: destroy <class> <id>
+        Deletes an instance based on the class name and id
+        """
         if not classname:
             print("** class name missing **")
             return
@@ -89,7 +95,9 @@ class HBNBCommand(cmd.Cmd):
             storage.save()
 
     def do_all(self, classname):
-        """Prints all string representation"""
+        """Usage: all or all <class>
+        Prints all string representation
+        """
         objects = storage.all()
         args = parse(classname)
         if not classname:
@@ -108,7 +116,9 @@ class HBNBCommand(cmd.Cmd):
             print(obj)
 
     def do_update(self, classname):
-        """Updates an instance based on the class name and id"""
+        """Usage: update <class> <id> <attribute_name> <attribute_value>
+        Updates an instance based on the class name and id
+        """
         args = parse(classname)
         objects = storage.all()
         if not classname:
