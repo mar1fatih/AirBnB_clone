@@ -20,10 +20,10 @@ def parse(args):
 
 
 class HBNBCommand(cmd.Cmd):
-    """class cmd"""
-    __classes = [
+    """class cmd attributes : prompt"""
+    __classes = {
             "BaseModel", "User", "State", "City",
-            "Amenity", "Place", "Review"]
+            "Amenity", "Place", "Review"}
 
     prompt = "(hbnb)"
 
