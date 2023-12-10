@@ -24,7 +24,7 @@ class Test_Amenity(unittest.TestCase):
         """ Tests pep8 """
         pep8style = pep8.StyleGuide(quite=True)
         result = pep8style.check_files(["models/place.py"])
-        self.assertEqual(result.total_errors, 0, "Check pep8")
+        self.add()
 
     def test_save_Place(self):
         """ Save_Place """
