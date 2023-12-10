@@ -16,7 +16,7 @@ def parse(args):
     """parsing commandes"""
     if not args:
         return None
-    return [arg for arg in shlex.split(args)]
+    return [arg.strip(",") for arg in shlex.split(args)]
 
 
 class HBNBCommand(cmd.Cmd):
