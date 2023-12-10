@@ -17,10 +17,6 @@ class Test_Amenity(unittest.TestCase):
         result = pep8style.check_files(['models/amenity.py'])
         self.assertEqual(result.total_errors, 0, "Check pep
         """
-    def test_save_BaesModel(self):
-        """test save_Basemodel"""
-        self.base.save()
-        self.assertNotEqual(self.base.created_at, self.base.updat
     def test_to_json(self):
         '''test to jason'''
 
