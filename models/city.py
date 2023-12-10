@@ -4,7 +4,7 @@ from models.base_model import BaseModel
 
 
 class City(BaseModel):
-    """class City"""
+    """class City check the code"""
 
     state_id = ""
     name = ""
