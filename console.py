@@ -14,7 +14,7 @@ from models.review import Review
 
 def parse(args):
     """parsing commandes"""
-    return [arg.strip(",") for arg in shlex.split(args)]
+    return [arg for arg in shlex.split(args)]
 
 
 class HBNBCommand(cmd.Cmd):
