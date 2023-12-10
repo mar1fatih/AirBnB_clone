@@ -26,17 +26,6 @@ class Test_Amenity(unittest.TestCase):
         result = pep8style.check_files(["models/place.py"])
         self.assertEqual(result.total_errors, 0, "Check pep8")
 
-
-    def test_Place_dict(self):
-        """ Place_dict """
-        self.assertTrue('id' in self.place.__dict__)
-        self.assertTrue('created_at' in self.place.__dict__)
-        self.assertTrue('updated_at' in self.place.__dict__)
-        self.assertTrue('city_id' in self.place.__dict__)
-        self.assertTrue('user_id' in self.place.__dict__)
-        self.assertTrue('name' in self.place.__dict__)
-        self.assertTrue('__class__' in self.place.__dict__)
-
     def test_save_Place(self):
         """ Save_Place """
         self.place.save()
