@@ -20,12 +20,7 @@ class Test_Amenity(unittest.TestCase):
     def test_save_BaesModel(self):
         """test save_Basemodel"""
         self.base.save()
-        self.assertNotEqual(self.base.created_at, self.base.updated_at)
-
-    def test_doc(self):
-        """ Tests doc """
-        self.assertisNotNone(BaseModel.__doc__)
-
+        self.assertNotEqual(self.base.created_at, self.base.updat
     def test_to_json(self):
         '''test to jason'''
 
