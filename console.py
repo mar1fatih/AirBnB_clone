@@ -14,8 +14,6 @@ from models.review import Review
 
 def parse(args):
     """parsing commandes"""
-    if not args:
-        return None
     return [arg.strip(",") for arg in shlex.split(args)]
 
 
@@ -51,9 +49,8 @@ class HBNBCommand(cmd.Cmd):
         if args[0] not in HBNBCommand.__classes:
             print("** class doesn't exist **")
             return
-        new_inctence = eval(args[0] + '()')
+        print(eval(args[0])().id)
         storage.save()
-        print("{}.{}".format(args[0], new_inctence.id))
 
     def do_show(self, classname):
         """Usage: show <class> <id>
@@ -88,10 +85,10 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
-        elif "{}.{}".format(args[0], args[1]) not in objects:
+        elif "{}.{}".format(args[0], args[1]) not in objects.keys():
             print("** no instance found **")
         else:
-            del storage.all()["{}.{}".format(args[0], args[1])]
+            del objects["{}.{}".format(args[0], args[1])]
             storage.save()
 
     def do_all(self, classname):
@@ -105,9 +102,8 @@ class HBNBCommand(cmd.Cmd):
             for v in objects.values():
                 obj.append(v.__str__())
             print(obj)
-        elif args[0] not in HBNBCommand.__classes or len(args) > 1:
+        elif len(args) > 0 and args[0] not in HBNBCommand.__classes:
             print("** class doesn't exist **")
-
         else:
             obj = []
             for v in objects.values():
