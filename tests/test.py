@@ -22,12 +22,8 @@ class Test_Amenity(unittest.TestCase):
         self.assertTrue('id' in self.amenity.__dict__)
         self.assertTrue('created_at' in self.amenity.__dict__)
         self.assertTrue('updated_at' in self.amenity.__dict__)
-        self.assertTrue('name' in self.amenity.__dict__)
-   
-    def test_save_Amenity(self):
-        """Amenity save"""
-        self.amenity.save()
-        self.dict.
+        self.assertTrue('name' in self.amenity
+    def trad()
 
 if __name__ == '__main__':
     unittest.main()
