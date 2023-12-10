@@ -6,10 +6,10 @@ import models
 
 
 class BaseModel:
-    """class BaseModel"""
+    """define class BaseModel"""
 
     def __init__(self, *args, **kwargs):
-        """constractor"""
+        """constractor for basemodel"""
         self.id = str(uuid.uuid4())
         self.created_at = datetime.today()
         self.updated_at = datetime.today()
@@ -23,7 +23,7 @@ class BaseModel:
             models.storage.new(self)
 
     def __str__(self):
-        """print the class instance"""
+        """print the string representation for class instance"""
         class_name = self.__class__.__name__
         return "[{}] ({}) {}".format(class_name, self.id, self.__dict__)
 
