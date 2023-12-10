@@ -10,14 +10,13 @@ class BaseModel:
 
     def __init__(self, *args, **kwargs):
         """constractor for basemodel"""
-        form_t = "%Y-%m-%dT%H:%M:%S.%f"
         self.id = str(uuid.uuid4())
         self.created_at = datetime.today()
         self.updated_at = datetime.today()
         if kwargs:
             for k, v in kwargs.items():
                 if k == "created_at" or k == "updated_at":
-                    self.__dict__[k] = datetime.strptime(v, form_t)
+                    self.__dict__[k] = datetime.fromisoformat(v)
                 else:
                     self.__dict__[k] = v
         else:
