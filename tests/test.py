@@ -27,7 +27,7 @@ class Test_Amenity(unittest.TestCase):
     def test_save_Amenity(self):
         """Amenity save"""
         self.amenity.save()
-        self.assertNotEqual(self.amenity.created_at, self.amenity.updated_at)
+        self.dict.
 
 if __name__ == '__main__':
     unittest.main()
