@@ -13,7 +13,7 @@ from models.review import Review
 
 
 def parse(args):
-    """parsing commandes"""
+    """parsing commandes to use it as commande"""
     return [arg for arg in shlex.split(args)]
 
 
@@ -26,7 +26,7 @@ class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
 
     def emptyline(self):
-        """dont do anything"""
+        """dont do anything just press enter"""
         pass
 
     def do_EOF(self, line):

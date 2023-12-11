@@ -18,19 +18,24 @@ class TestFileStorage(unittest.TestCase):
     """testing FileStorage class"""
 
     def test_file_path_Type(self):
+        """function to test FileStorage class"""
         self.assertEqual(str, type(FileStorage._FileStorage__file_path))
 
     def test_Error_Raise(self):
+        """function to test FileStorage class"""
         with self.assertRaises(TypeError):
             FileStorage(None)
 
     def test_FileStorage(self):
+        """function to test FileStorage class"""
         self.assertEqual(type(FileStorage()), FileStorage)
 
     def testFileStorage_objects_Type(self):
+        """function to test FileStorage class"""
         self.assertEqual(dict, type(FileStorage._FileStorage__objects))
 
     def test_storage(self):
+        """function to test FileStorage class"""
         self.assertEqual(type(models.storage), FileStorage)
 
 
@@ -57,9 +62,11 @@ class TestFileStorage_methods(unittest.TestCase):
         FileStorage._FileStorage__objects = {}
 
     def test_all(self):
+        """function to test FileStorage class"""
         self.assertEqual(type(models.storage.all()), dict)
 
     def test_new(self):
+        """function to test FileStorage class"""
         Base = BaseModel()
         User1 = User()
         City1 = City()
@@ -92,6 +99,7 @@ class TestFileStorage_methods(unittest.TestCase):
         self.assertIn(Base, all_values)
 
     def test_save(self):
+        """function to test FileStorage class"""
         text = ""
         Base = BaseModel()
         User1 = User()
@@ -119,6 +127,7 @@ class TestFileStorage_methods(unittest.TestCase):
             self.assertIn("Place." + Place1.id, text)
 
     def test_reload(self):
+        """function to test FileStorage class"""
         Base = BaseModel()
         User1 = User()
         City1 = City()
@@ -145,18 +154,22 @@ class TestFileStorage_methods(unittest.TestCase):
         self.assertIn("Amenity." + Amenity1.id, objs)
 
     def test_reload_Raises(self):
+        """function to test FileStorage class"""
         with self.assertRaises(TypeError):
             models.storage.reload(None)
 
     def test_all_Error(self):
+        """function to test FileStorage class"""
         with self.assertRaises(TypeError):
             models.storage.all(None)
 
     def test_new_Raises(self):
+        """function to test FileStorage class"""
         with self.assertRaises(TypeError):
             models.storage.new(BaseModel(), "hi")
 
     def test_save_Raises(self):
+        """function to test FileStorage class"""
         with self.assertRaises(TypeError):
             models.storage.save(None)
 
