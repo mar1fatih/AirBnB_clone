@@ -70,7 +70,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(am.updated_at, datetime.fromisoformat(date_iso))
 
 
-class TestBaseModel_save(unittest.TestCase):
+class TestBaseModelSave(unittest.TestCase):
     """testing save method"""
 
     @classmethod
@@ -126,7 +126,7 @@ class TestBaseModel_save(unittest.TestCase):
         self.assertLess(second_updated_at, Base1.updated_at)
 
 
-class TestBaseModel_to_dict(unittest.TestCase):
+class TestBaseModelToDict(unittest.TestCase):
     """Unittests to_dict method for BaseModel"""
 
     def test_type_to_dict(self):

@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """unittests for amenity"""
 import os
-from models.amenity import Amenity
 import models
 import unittest
+from models.amenity import Amenity
 from datetime import datetime
 from time import sleep
 
@@ -76,7 +76,7 @@ class TestAmenity(unittest.TestCase):
             Amenity(id=None, created_at=None, updated_at=None)
 
 
-class Test_to_dict_Amenity(unittest.TestCase):
+class TestToDictAmenity(unittest.TestCase):
     """Unittests to_dict method for amenity"""
 
     def test_type_to_dict(self):
@@ -119,7 +119,7 @@ class Test_to_dict_Amenity(unittest.TestCase):
         self.assertNotEqual(amenity1.to_dict(), amenity1.__dict__)
 
 
-class Test_save_amenity(unittest.TestCase):
+class TestSaveAmenity(unittest.TestCase):
     """testing save method"""
 
     @classmethod

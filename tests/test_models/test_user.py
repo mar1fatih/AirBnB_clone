@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """unittests for user.py"""
-from models.user import User
-from datetime import datetime
 import unittest
 import models
 import os
+from models.user import User
+from datetime import datetime
 from time import sleep
 
 
@@ -86,7 +86,7 @@ class TestUser(unittest.TestCase):
         self.assertEqual(User1.updated_at, datetime.fromisoformat(date_iso))
 
 
-class TestUser_todict(unittest.TestCase):
+class TestUserToDict(unittest.TestCase):
     """testing to_dict method"""
 
     def test_type_to_dict(self):
@@ -128,7 +128,7 @@ class TestUser_todict(unittest.TestCase):
         self.assertNotEqual(User1.to_dict(), User1.__dict__)
 
 
-class TestUser_save(unittest.TestCase):
+class TestUserSave(unittest.TestCase):
     """testing save method"""
 
     @classmethod

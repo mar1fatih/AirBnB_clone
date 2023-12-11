@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """class BaseModel check the code"""
 import uuid
-from datetime import datetime
 import models
+from datetime import datetime
 
 
 class BaseModel:

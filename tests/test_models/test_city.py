@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """unittests for city"""
-from models.city import City
 import os
 import models
-from time import sleep
 import unittest
+from models.city import City
+from time import sleep
 from datetime import datetime
 
 
@@ -83,7 +83,7 @@ class TestCity(unittest.TestCase):
             City(id=None, created_at=None, updated_at=None)
 
 
-class TestCity_save(unittest.TestCase):
+class TestCitySave(unittest.TestCase):
     """Unittests for save method"""
 
     @classmethod
@@ -138,7 +138,7 @@ class TestCity_save(unittest.TestCase):
         self.assertLess(second_updated_at, City1.updated_at)
 
 
-class TestCity_to_dict(unittest.TestCase):
+class TestCityToDict(unittest.TestCase):
     """Unittests for to_dict method"""
 
     def test_type_to_dict(self):

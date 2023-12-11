@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """unittests for state.py"""
-from models.state import State
-from datetime import datetime
 import unittest
 import models
 import os
+from models.state import State
+from datetime import datetime
 from time import sleep
 
 
@@ -77,7 +77,7 @@ class TestState(unittest.TestCase):
         self.assertEqual(State1.updated_at, datetime.fromisoformat(date_iso))
 
 
-class TestState_save(unittest.TestCase):
+class TestStateSave(unittest.TestCase):
     """testing save method"""
 
     @classmethod
@@ -132,7 +132,7 @@ class TestState_save(unittest.TestCase):
         self.assertLess(second_updated_at, State1.updated_at)
 
 
-class TestState_todict(unittest.TestCase):
+class TestStateToDict(unittest.TestCase):
     """testing to_dict method"""
 
     def test_type_to_dict(self):

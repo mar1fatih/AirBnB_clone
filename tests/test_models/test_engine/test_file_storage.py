@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 """unittests for file_storage"""
+import models
+import os
+import unittest
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
 from models.user import User
@@ -8,10 +11,7 @@ from models.place import Place
 from models.city import City
 from models.amenity import Amenity
 from models.review import Review
-import unittest
 from datetime import datetime
-import os
-import models
 
 
 class TestFileStorage(unittest.TestCase):
@@ -39,7 +39,7 @@ class TestFileStorage(unittest.TestCase):
         self.assertEqual(type(models.storage), FileStorage)
 
 
-class TestFileStorage_methods(unittest.TestCase):
+class TestFileStorageMethods(unittest.TestCase):
     """testing methods"""
 
     @classmethod

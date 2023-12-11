@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """unittests for place.py"""
-from models.place import Place
-from datetime import datetime
+import os
 import unittest
 import models
-import os
+from models.place import Place
+from datetime import datetime
 from time import sleep
 
 
@@ -147,7 +147,7 @@ class TestPlace(unittest.TestCase):
         self.assertEqual(Place1.updated_at, datetime.fromisoformat(date_iso))
 
 
-class TestPlace_save(unittest.TestCase):
+class TestPlaceSave(unittest.TestCase):
     """testing save method"""
 
     @classmethod
@@ -202,7 +202,7 @@ class TestPlace_save(unittest.TestCase):
         self.assertLess(second_updated_at, Place1.updated_at)
 
 
-class TestPlace_to_dict(unittest.TestCase):
+class TestPlaceToDict(unittest.TestCase):
     """testing to_dict method"""
 
     def test_type_to_dict(self):
